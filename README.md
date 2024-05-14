@@ -7,11 +7,11 @@ This repository contains a Bash script that fixes `output-DoseState.R` file outp
    - Ensures Chromium is in the PATH and accessible.
 
 2. **Instructions for Installing `webshot2`**:
-   - The script provides messages to guide the user in installing `webshot2` in R.
+   - The script will install `webshot2` in R.
 
 3. **Modify the R Script**:
    - The script replaces `rgl.viewpoint` with `view3d`.
-   - Also replaces `rgl.snapshot` with `snapshot3d` and includes the `width` and `height` parameters.
+   - And it also replaces `rgl.snapshot` with `snapshot3d` including the `width` and `height` parameters.
 
 4. **Run the R Script**:
    - The Bash script runs the modified R script.
@@ -21,8 +21,8 @@ This repository contains a Bash script that fixes `output-DoseState.R` file outp
 
 ## Usage
 
-1. Copy the `fix.sh` to your working directory.
+1. Copy `fix.sh` to your working directory with the results from `RADDOSE-3D`
 2. Make it executable `chmod +x fix.sh`
-3. Run it with `./fix.sh`... and read the output.
+3. Run it with `./fix.sh`...
 
 Hopefully you can see the images now.
