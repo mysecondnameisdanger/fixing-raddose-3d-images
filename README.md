@@ -26,3 +26,6 @@ This repository contains a Bash script that fixes `output-DoseState.R` file outp
 3. Run it with `./fix.sh`...
 
 Hopefully you can see the images now.
+
+## Advice
+Always check your `contourlevels`. This works for `b3x11`: `contourlevels<- c(0.05, 0.50, 2.00) # MGy`
