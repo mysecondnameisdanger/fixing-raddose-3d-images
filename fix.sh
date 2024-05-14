@@ -13,10 +13,8 @@ fi
 
 echo "Chromium instalado y en el PATH."
 
-# Mensaje para instalar webshot2
-echo "Instale el paquete 'webshot2' en R para habilitar la captura de imágenes. Ejecute los siguientes comandos en R:"
-echo "remotes::install_github('rstudio/webshot2')"
-echo "library('webshot2')"
+# Añadir instalación de webshot2 en el script R si no está presente
+sed -i '1s/^/# Instalar webshot2 si no está instalado\nif (!require("webshot2")) {\n  if (!requireNamespace("remotes", quietly = TRUE)) {\n    install.packages("remotes")\n  }\n  remotes::install_github("rstudio/webshot2")\n  library(webshot2)\n}\n\n/' output-DoseState.R
 
 # Sustituir rgl.viewpoint por view3d en el script R
 sed -i 's/rgl.viewpoint/view3d/g' output-DoseState.R
